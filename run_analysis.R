@@ -72,7 +72,6 @@ subjectActivity <- subjectActivity[, columns_to_keep]
 subjectActivity$activity <- factor(subjectActivity$activity, 
                                  levels = activities[, 1], labels = activities[, 2])
 
-
 # Step 4
 # Appropriately label the data set with descriptive variable names
 ######
@@ -84,8 +83,8 @@ subjectActivityCols <- colnames(subjectActivity)
 subjectActivityCols <- gsub("[\\(\\)-]", "", subjectActivityCols)
 
 # expand abbreviations and clean up names
-subjectActivityCols <- gsub("^f", "Frequency", subjectActivityCols)
-subjectActivityCols <- gsub("^t", "Time", subjectActivityCols)
+subjectActivityCols <- gsub("^f", "frequency", subjectActivityCols)
+subjectActivityCols <- gsub("^t", "time", subjectActivityCols)
 subjectActivityCols <- gsub("Acc", "Accelerometer", subjectActivityCols)
 subjectActivityCols <- gsub("Gyro", "Gyroscope", subjectActivityCols)
 subjectActivityCols <- gsub("Mag", "Magnitude", subjectActivityCols)
